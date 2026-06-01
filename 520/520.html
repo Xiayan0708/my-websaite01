@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>第303天，你给我的夏天</title>
+
+<style>
+/* ===== 基础样式 ===== */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei";
+  background: #FFF9F6;
+  color: #3E3E3E;
+  scroll-behavior: smooth;
+}
+
+/* ===== 封面 ===== */
+.cover {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+.cover h1 {
+  font-size: 28px;
+  font-weight: normal;
+  line-height: 1.8;
+}
+.cover span {
+  color: #FF8FA3;
+}
+
+/* ===== 时间线 ===== */
+.timeline {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+}
+.item {
+  margin-bottom: 120px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+.item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.item img {
+  width: 100%;
+  border-radius: 16px;
+  transition: transform 0.4s ease;
+}
+.item img:hover {
+  transform: scale(1.02);
+}
+.text {
+  margin-top: 18px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.number {
+  text-align: right;
+  font-size: 14px;
+  color: #FF8FA3;
+  margin-top: 6px;
+}
+
+/* ===== 结尾 ===== */
+.end {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 17px;
+  line-height: 2;
+}
+.end span {
+  color: #FF8FA3;
+}
+
+/* ===== 背景音乐按钮 ===== */
+.music-btn {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+}
+.music-btn::before {
+  content: "♪";
+  font-size: 18px;
+  color: #FF8FA3;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 背景音乐 -->
+<audio id="bgm" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<div class="music-btn" onclick="document.getElementById('bgm').play()"></div>
+
+<!-- 封面 -->
+<section class="cover">
+  <h1>
+    今天是 520<br/>
+    我们在一起 <span>303 天</span> 了<br/><br/>
+    我没准备什么贵的东西<br/>
+    只想带你重新走一遍<br/>
+    我们走过的路
+  </h1>
+</section>
+
+<!-- 时间线 -->
+<section class="timeline">
+
+  <div class="item">
+    <img src="1.jpg">
+    <div class="text">我们在一起啦<br/>那天之后，我的生活里多了一个叫“老婆”的人。</div>
+    <div class="number">01 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="2.jpg">
+    <div class="text">第一次过情人节<br/>那时候我不太会浪漫，只知道想让你知道，你在被人好好喜欢着。</div>
+    <div class="number">02 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="3.jpg">
+    <div class="text">见面啦<br/>终于能牵到你的手，那一刻我就知道，所有的奔波都值得。</div>
+    <div class="number">03 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="4.jpg">
+    <div class="text">出来吃大餐啦<br/>其实吃什么不重要，重要的是坐在你对面。</div>
+    <div class="number">04 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="5.jpg">
+    <div class="text">第一次旅行，去南昌啦<br/>拖着行李箱，像私奔一样，又像回家一样安心。</div>
+    <div class="number">05 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="6.jpg">
+    <div class="text">吃完饭美美出片<br/>你总说我拍得不好，可你怎么会不知道，是因为你太好看。</div>
+    <div class="number">06 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="7.jpg">
+    <div class="text">疯狂动物城2<br/>电影院里很暗，我偷偷看了你好几次，比电影精彩多了。</div>
+    <div class="number">07 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="8.jpg">
+    <div class="text">送老婆上班<br/>你迷迷糊糊的样子，让我觉得，平凡的日子也很浪漫。</div>
+    <div class="number">08 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="9.jpg">
+    <div class="text">跨年啦<br/>烟花升起的时候，我许了个愿，希望以后每一个新年，身边都是你。</div>
+    <div class="number">09 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="10.jpg">
+    <div class="text">赚钱给老婆买花花<br/>我知道你怕我乱花钱，可我就是想把最好的都给你看看。</div>
+    <div class="number">10 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="11.jpg">
+    <div class="text">景德镇我们来啦<br/>你说喜欢那里的瓷器，我就想带你去看看。</div>
+    <div class="number">11 / 12</div>
+  </div>
+
+  <div class="item">
+    <img src="12.jpg">
+    <div class="text">老婆是我的小公主<br/>今天你穿着小裙子，笑得像童话里的人。</div>
+    <div class="number">12 / 12</div>
+  </div>
+
+</section>
+
+<!-- 结尾 -->
+<section class="end">
+  <div>
+    303 天<br/>
+    我们一起吃了很多顿饭<br/>
+    走了很多路<br/>
+    也熬过了很多不容易<br/><br/>
+    你总说怕给我添麻烦<br/>
+    可你知道吗<br/>
+    <span>是你给了我，一整个夏天</span>
+  </div>
+</section>
+
+<script>
+// 滚动淡入
+const items = document.querySelectorAll('.item');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
+  });
+}, { threshold: 0.2 });
+
+items.forEach(item => observer.observe(item));
+</script>
+
+</body>
+</html>
